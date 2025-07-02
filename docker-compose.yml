@@ -44,7 +44,7 @@ services:
     depends_on:
       - db
     environment:
-      DATABASE_URL: postgresql+psycopg2://postgres:rootuser@db:5432/testdb
+      DATABASE_URL: postgresql+psycopg2://postgres:rootuser@hostname:5432/testdb
     ports:
       - "8000:8000"
     command: uvicorn main:app --host 0.0.0.0 --port 8000
